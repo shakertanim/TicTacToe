@@ -7,7 +7,7 @@
     <meta name="keywords" content="Test, Project 1">
     <title>Tic Tac Toe</title>
     <style>
-        .button {padding: 20px}
+        .button {padding: 20px; font-size: larger}
     </style>
     <script type="text/javascript" src="ttt.js"></script>
 </head>
@@ -15,19 +15,38 @@
 
 <table>
     <tr>
-        <td class="button" id="btn1"><input class="button" type="button" value="1" onclick="internalCall('btn1')"></td>
-        <td class="button" id="btn2"><input class="button" type="button" value="2" onclick="internalCall('btn2')"></td>
-        <td class="button" id="btn3"><input class="button" type="button" value="3" onclick="internalCall('btn3')"></td>
-    </tr>
-    <tr>
-        <td class="button" id="btn4"><input class="button" type="button" value="4" onclick="internalCall('btn4')"></td>
-        <td class="button" id="btn5"><input class="button" type="button" value="5" onclick="internalCall('btn5')"></td>
-        <td class="button" id="btn6"><input class="button" type="button" value="6" onclick="internalCall('btn6')"></td>
-    </tr>
-    <tr>
-        <td class="button" id="btn7"><input class="button" type="button" value="7" onclick="internalCall('btn7')"></td>
-        <td class="button" id="btn8"><input class="button" type="button" value="8" onclick="internalCall('btn8')"></td>
-        <td class="button" id="btn9"><input class="button" type="button" value="9" onclick="internalCall('btn9')"></td>
+        <td><label>User 1 Name : </label></td><td><label>
+        <input id="name1" class="textbox" type="text">
+    </label></td>
+        <td><label>User 2 Name : </label></td><td><label>
+        <input id="name2" class="textbox" type="text">
+    </label></td>
+        <td>
+            <input id="start" type="button" oninput="internalCall('start')" value="Start Game">
+        </td>
     </tr>
 </table>
+<table>
+    <tr>
+        <td class="button" id="btn1"><input class="button" type="button" value="1" onclick="internalCall('btn1')" ></td>
+        <td class="button" id="btn2"><input class="button" type="button" value="2" onclick="internalCall('btn2')" ></td>
+        <td class="button" id="btn3"><input class="button" type="button" value="3" onclick="internalCall('btn3')" ></td>
+    </tr>
+    <tr>
+        <td class="button" id="btn4"><input class="button" type="button" value="4" onclick="internalCall('btn4')" ></td>
+        <td class="button" id="btn5"><input class="button" type="button" value="5" onclick="internalCall('btn5')" ></td>
+        <td class="button" id="btn6"><input class="button" type="button" value="6" onclick="internalCall('btn6')" ></td>
+    </tr>
+    <tr>
+        <td class="button" id="btn7"><input class="button" type="button" value="7" onclick="internalCall('btn7')" ></td>
+        <td class="button" id="btn8"><input class="button" type="button" value="8" onclick="internalCall('btn8')" ></td>
+        <td class="button" id="btn9"><input class="button" type="button" value="9" onclick="internalCall('btn9')" ></td>
+    </tr>
+</table>
+<br>
+<br>
+<div><p id="output"></p>
+<br>
+    <p id="win">
+</div>
 </body>

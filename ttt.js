@@ -4,23 +4,31 @@ var count=0;
 
 function internalCall(buttonID) {
     count++;
+
     b1[count-1] = document.getElementById(buttonID);
 
 
+    let user1 = document.getElementById("name1").value;
+    let user2 = document.getElementById("name2").value;
+    let output = document.getElementById("output");
+    let win = document.getElementById("win");
 
+    var user = user1;
 
-    var user = "";
-
-
+    output.innerHTML = `${user} turns`;
     if ( (count%2) !== 0) {
         b1[count - 1].querySelector('input').value = 'X';
         b1[count - 1].querySelector('input').disabled = true;
-        user = "User1";
+        user = user2;
+        output.innerHTML = `${user} turns`;
+        user = user1;
     }
     else {
         b1[count - 1].querySelector('input').value = 'O';
         b1[count - 1].querySelector('input').disabled = true;
-        user = "User2";
+        user = user1;
+        output.innerHTML = `${user} turns`;
+        user = user2;
     }
 
     let name = b1[count - 1].querySelector('input'); // Access the input element inside the HTML element
@@ -48,15 +56,15 @@ function internalCall(buttonID) {
 
 
     if ((value1 === value2 && value2 === value3) || (value4 === value5 && value5 === value6) || (value7 === value8 && value8 === value9)) {
-         alert(`${user} own the game.`);
+         output.innerHTML = `${user} own the game.`;
          disableAll(btn1, btn2, btn3, btn4,btn5,btn6,btn7,btn8,btn9);
      }
     else if ((value1 === value4 && value4 === value7) || (value2 === value5 && value5 === value8) || (value3 === value6 && value6 === value9)) {
-        alert(`${user} own the game.`);
+        output.innerHTML = `${user} own the game.`;
         disableAll(btn1, btn2, btn3, btn4,btn5,btn6,btn7,btn8,btn9);
     }
     else if ((value1===value5 && value5 === value9) || (value3===value5 && value5 === value7)) {
-        alert(`${user} own the game.`);
+        output.innerHTML = `${user} own the game.`;
         disableAll(btn1, btn2, btn3, btn4,btn5,btn6,btn7,btn8,btn9);
     }
 }
